@@ -56,8 +56,14 @@
         margin-left: 0.2rem;
       }
       .title-subtext {
+        all: unset;
         font-size: 0.9rem;
         color: hsl(219, 14%, 63%);
+      }
+      .title-subtext:hover {
+        color: hsl(219, 85%, 26%);
+        cursor: pointer;
+        font-weight: 600;
       }
       .notification-wrapper {
         display: flex;
@@ -86,6 +92,10 @@
         font-weight: 800;
         margin-right: 0.2rem;
       }
+      .name:hover {
+        color: hsl(219, 85%, 26%);
+        cursor: pointer;
+      }
       .time {
         margin-top: 0.2rem;
         display: block;
@@ -96,6 +106,10 @@
         font-weight: 700;
         color: hsl(219, 12%, 42%);
       }
+      .bold-text:hover {
+        color: hsl(219, 85%, 26%);
+        cursor: pointer;
+      }
       .dot {
         height: 0.5rem;
         width: 0.5rem;
@@ -103,11 +117,6 @@
         background-color: hsl(1, 90%, 64%);
         border-radius: 50%;
         display: inline-block;
-      }
-      .group {
-        color: hsl(219, 85%, 26%);
-        font-weight: 800;
-        margin-left: 0.2rem;
       }
       .message {
         display: block;
@@ -119,6 +128,10 @@
         margin-top: 0.5rem;
         margin-right: 1rem;
         border-width: 0.1rem;
+      }
+      .message:hover {
+        background: hsl(211, 68%, 94%);
+        cursor: pointer;
       }
       .attribution {
         font-size: 11px;
@@ -150,11 +163,13 @@
         <!-- Title -->
         <div class="title-container">
           <h1 class="title">Notifications <span class="count">3</span></h1>
-          <p class="title-subtext">Mark all as read</p>
+          <button class="title-subtext" onclick="markAll()">
+            Mark all as read
+          </button>
         </div>
 
         <!-- Notification 1 -->
-        <div class="notification-wrapper unread">
+        <div class="notification-wrapper unread" onclick="markAll()">
           <img
             src="/assets/images/avatar-mark-webber.webp"
             alt="avatar"
@@ -190,7 +205,7 @@
           />
           <p class="notification-text">
             <span class="name">Jacob Thompson</span> has joined your group
-            <span class="group">Chess Club</span><span class="dot"></span>
+            <span class="bold-text">Chess Club</span><span class="dot"></span>
             <span class="time">1 day ago</span>
           </p>
         </div>
@@ -255,7 +270,7 @@
           />
           <p class="notification-text">
             <span class="name">Anna Kim</span> left the group
-            <span class="group">Chess Club</span>
+            <span class="bold-text">Chess Club</span>
             <span class="time">2 weeks ago</span>
           </p>
         </div>
@@ -267,5 +282,13 @@
         </div>
       </div>
     </main>
+    <script>
+      function markAll(e) {
+        alert("You Clicked me");
+
+        var element = document.getElementById(e.target.id);
+        element.classList.toggle("unread");
+      }
+    </script>
   </body>
 </html>
