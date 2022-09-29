@@ -1,51 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+    <title>Frontend Mentor | Notifications page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .main {
+        padding: 0 0.2rem;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 500;
+      }
+      .unread {
+        background: hsl(210, 60%, 98%);
+      }
+      .title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        font-size: 1.4rem;
+        color: hsl(224, 21%, 14%);
+      }
+      .count {
+        font-size: 1rem;
+        border-radius: 0.4rem;
+        background: hsl(219, 85%, 26%);
+        color: hsl(0, 0%, 100%);
+        padding: 0.1rem 0.6rem;
+        margin-left: 0.2rem;
+      }
+      .title-subtext {
+        font-size: 0.9rem;
+        color: hsl(219, 14%, 63%);
+      }
+      .notification-wrapper {
+        display: flex;
+        align-items: top;
 
-  Notifications 3
+        border-radius: 0.5rem;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      .notification-text {
+        padding: 0rem 0 0 0.8rem;
+        margin: 0;
+        font-size: 16px;
+      }
+      .name {
+        font-weight: 800;
+        margin-right: 0.2rem;
+      }
+      .time {
+        margin-top: 0.2rem;
+        display: block;
+        color: hsl(219, 14%, 63%);
+      }
+      .bold-text {
+        margin-left: 0.2rem;
+        font-weight: 700;
+        color: hsl(219, 12%, 42%);
+      }
+      .dot {
+        height: 0.5rem;
+        width: 0.5rem;
+        margin-left: 0.2rem;
+        background-color: hsl(1, 90%, 64%);
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .group {
+        color: hsl(219, 85%, 26%);
+        font-weight: 800;
+        margin-left: 0.2rem;
+      }
+      .message {
+        display: block;
+        border-style: solid;
+        border-color: hsl(211, 68%, 94%);
+        border-radius: 0.5rem;
+        color: hsl(219, 12%, 42%);
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border-width: 0.1rem;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <!-- Title -->
+      <div class="title-container">
+        <h1 class="title">Notifications <span class="count">3</span></h1>
+        <p class="title-subtext">Mark all as read</p>
+      </div>
 
-  Mark all as read
+      <!-- Notification 1 -->
+      <div class="notification-wrapper unread">
+        <img
+          src="/assets/images/avatar-mark-webber.webp"
+          alt=""
+          class="avatar"
+        />
+        <p class="notification-text">
+          <span class="name">Mark Webber</span> reacted to your recent post
+          <span class="bold-text">My first tournament today!</span
+          ><span class="dot"></span> <span class="time">1m ago</span>
+        </p>
+      </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+      <!-- Notification 2 -->
 
-  Angela Gray followed you
-  5m ago
+      <div class="notification-wrapper unread">
+        <img
+          src="/assets/images/avatar-angela-gray.webp"
+          alt=""
+          class="avatar"
+        />
+        <p class="notification-text">
+          <span class="name">Angela Gray</span> followed you
+          <span class="dot"></span><span class="time">5m ago</span>
+        </p>
+      </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+      <!-- Notification 3 -->
+      <div class="notification-wrapper unread">
+        <img
+          src="/assets/images/avatar-jacob-thompson.webp"
+          alt=""
+          class="avatar"
+        />
+        <p class="notification-text">
+          <span class="name">Jacob Thompson</span> has joined your group
+          <span class="group">Chess Club</span><span class="dot"></span>
+          <span class="time">1 day ago</span>
+        </p>
+      </div>
+      <!-- Notification 4 -->
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
-
-  Kimberly Smith commented on your picture
-  1 week ago
-
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="notification-wrapper">
+        <img
+          src="/assets/images/avatar-rizky-hasanuddin.webp"
+          alt=""
+          class="avatar"
+        />
+        <p class="notification-text">
+          <span class="name">Rizky Hasanuddin</span> sent you a private message
+          <span class="time">5 days ago</span>
+          <span class="message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
+          </span>
+        </p>
+      </div>
+      <!-- Notification 5 -->
+      <p>
+        <span> Kimberly Smith</span> commented on your picture
+        <span>1 week ago</span>
+      </p>
+      <!-- Notification 6 -->
+      <p>
+        <span>Nathan Peterson</span> reacted to your recent post
+        <span>5 end-game strategies to increase your win rate</span>
+        <span>2 weeks ago</span>
+      </p>
+      <!-- Notification 7 -->
+      <p>
+        <span>Anna Kim</span> left the group <span>Chess Club</span>
+        <span>2 weeks ago</span>
+      </p>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
