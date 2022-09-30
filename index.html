@@ -162,14 +162,16 @@
       <div class="container">
         <!-- Title -->
         <div class="title-container">
-          <h1 class="title">Notifications <span class="count">3</span></h1>
-          <button class="title-subtext" onclick="markAll()">
+          <h1 class="title">
+            Notifications <span class="count" id="count">3</span>
+          </h1>
+          <button class="title-subtext" onclick="toggle()">
             Mark all as read
           </button>
         </div>
 
         <!-- Notification 1 -->
-        <div class="notification-wrapper unread" onclick="markAll()">
+        <div class="notification-wrapper unread">
           <img
             src="/assets/images/avatar-mark-webber.webp"
             alt="avatar"
@@ -178,7 +180,8 @@
           <p class="notification-text">
             <span class="name">Mark Webber</span> reacted to your recent post
             <span class="bold-text">My first tournament today!</span
-            ><span class="dot"></span> <span class="time">1m ago</span>
+            ><span class="dot" id="dot1"></span>
+            <span class="time">1m ago</span>
           </p>
         </div>
 
@@ -283,11 +286,20 @@
       </div>
     </main>
     <script>
-      function markAll(e) {
-        alert("You Clicked me");
+      function toggle(clicked_id) {
+        var wrappers = document.querySelectorAll(".notification-wrapper");
 
-        var element = document.getElementById(e.target.id);
-        element.classList.toggle("unread");
+        [].forEach.call(wrappers, function (el) {
+          el.classList.remove("unread");
+        });
+
+        var dots = document.querySelectorAll(".dot");
+
+        [].forEach.call(dots, function (el) {
+          el.classList.remove("dot");
+        });
+
+        document.getElementById("count").innerHTML = "0";
       }
     </script>
   </body>
