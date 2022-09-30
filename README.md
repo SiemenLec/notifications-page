@@ -26,9 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](/assets/images/notifications-desktop.png)
+![](/assets/images/notifications-desktop.PNG)
 
-![](/assets/images/notifications-mobile.png)
+![](/assets/images/notifications-mobile.PNG)
 
 ### Links
 
