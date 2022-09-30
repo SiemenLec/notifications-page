@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://notifications-page-9px8ktrab-siemenlec.vercel.app/](https://notifications-page-9px8ktrab-siemenlec.vercel.app/)
+- Solution URL: [https://www.frontendmentor.io/solutions/notifications-page-CFmZ8FhU6B](https://www.frontendmentor.io/solutions/notifications-page-CFmZ8FhU6B)
 - Live Site URL: [https://notifications-page-9px8ktrab-siemenlec.vercel.app/](https://notifications-page-9px8ktrab-siemenlec.vercel.app/)
 
 ## My process
